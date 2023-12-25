@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'menu',
     'kopiratjad',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -38,7 +38,7 @@
     <!-- header section strats -->
     <header class="header_section long_section px-0">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
           <span>
             KopiRatjad
           </span>
@@ -54,11 +54,11 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/about"> About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/blog">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/menu">Menu</a>
@@ -87,35 +87,28 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
+  <!-- furniture section -->
 
-  <section class="about_section layout_padding long_section">
+  <section class="furniture_section layout_padding">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="{% static 'images/j.jpg' %}" alt="" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>About Us</h2>
-            </div>
-            <p>
-              "KopiRatjad" Dapat menciptakan minuman kopi dengan kualitas
-              tinggi. Beberapa orang menikmati pengalaman ini dan menghargai
-              keahlian barista.
-            </p>
-           
-          </div>
-        </div>
+      <div class="heading_container">
+        <h2>Menu Detail</h2>
       </div>
+      <div>
+        <a href="{% url 'menu' %}" class="btn btn-success">Kembali ke Menu</a>
+      </div>
+      <br>
+      
+      <div>
+        <h2>{{ menu.nama_product}}</h2>
+        <h4><span class="badge badge-warning">{{ menudetail.status }}</span></h4>
+    <p>
+        {{ menu.harga }}
+    </p>  
+    </div>
     </div>
   </section>
-
-  <!-- end about section -->
-
+  <!-- end furniture section -->
 
   <!-- info section -->
   <section class="info_section long_section">
